@@ -43,6 +43,7 @@ def _convert_to_datastore(input_path, store, tz):
         dtype_dict = {m: np.float32 for m in MAJOR_LOAD}
         dtype_dict[TIME_INDEX] = pd.datetime
         whole_df = pd.read_csv(csv_filename, index_col=TIME_INDEX, dtype=dtype_dict)
+        whole_df.index.name=None
         print ("processing ", home_id, end="... ")
         for meter in MAJOR_LOAD:
             meter_id = int(MAJOR_LOAD.index(meter))+1
