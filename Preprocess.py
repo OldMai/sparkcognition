@@ -179,22 +179,24 @@ class Transpose:
                         
     # We give the output of transposing function to downsample each csv
     @staticmethod
+    # Function to downsample (default - downsample to 5 minutes)
     def downsample(path, d=5):
+        # output directory path
          output_path = os.path.join(path, "df_output_downsampled")
     if not os.path.exists(output_path):
         os.mkdir(output_path)
-    
+    # get all csv from path and read using pandas
     for doc in os.listdir(path):
         if doc.endswith(".csv"):
             data=pd.read_csv(os.path.join(path,doc))
            
-                    
+           #Creating data frame, dt with column date using read data         
             dt=pd.DataFrame(data=data,columns=['Date'])
-                    
+            # Taking the sum of d observations which represent the consumption at that minute        
             for i in range(0,288):
             	dt[data.columns[i*d+d]]=data[data.columns[i*d+1:i*d+(d+1)]].sum(1)
                 
-
+            # Creating csv with downsampled data to d minutes
             dt.to_csv(os.path.join(output_path,'downsampled_'+ doc))
                     
 
