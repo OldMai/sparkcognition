@@ -194,7 +194,8 @@ class Transpose:
            
            #Creating data frame, dt with column 'Date'        
             dt=pd.DataFrame(data=data,columns=['Date'])
-            # Taking the sum of d observations which represent the consumption at that minute        
+            # Taking the sum of d original observation which is the consumption at every minute
+            # The data will be downsampled to d minutes (default 5)
             for i in range(0,288):
             	dt[data.columns[i*d+d]]=data[data.columns[i*d+1:i*d+(d+1)]].sum(1)
                 
