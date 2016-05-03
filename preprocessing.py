@@ -168,7 +168,9 @@ class Transpose:
                         df['Time']=df['Timestamp'].dt.time 
 
                         # transform the matrix to the format we want
-                        dt=df[df['weekday']<5].pivot(index='Date', columns='Time', values='Value')              
+                        # weekday<5 represent weekdays
+                        dt=df[df['weekday']<5].pivot(index='Date', columns='Time', values='Value') 
+                        #weekday>4 represents weekends
                         dtw=df[df['weekday']>4].pivot(index='Date', columns='Time', values='Value') 
                         
                         dt.to_csv(os.path.join(output_path,'tranpose_' + doc))
@@ -190,7 +192,7 @@ class Transpose:
         if doc.endswith(".csv"):
             data=pd.read_csv(os.path.join(path,doc))
            
-           #Creating data frame, dt with column date using read data         
+           #Creating data frame, dt with column 'Date'        
             dt=pd.DataFrame(data=data,columns=['Date'])
             # Taking the sum of d observations which represent the consumption at that minute        
             for i in range(0,288):
