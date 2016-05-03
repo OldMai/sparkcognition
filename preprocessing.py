@@ -159,7 +159,7 @@ class Transpose:
                                     'Houseid':home_id})
                         # transform 'localminute' to meaningful datetime format
                         # e.g. transform 00:10:00-05 to 05:10:00
-                        df['Timestamp']=pd.to_datetime(df['Timestamp'])  
+                        df['Timestamp']=pd.to_datetime(df['Timestamp'], format='%Y-%m-%d %H:%M:%S-05')  
                         df.set_index(['Timestamp'])  
 
                         # create 3 new columns shows the corresponding dayofweek (0-6), date, and time
