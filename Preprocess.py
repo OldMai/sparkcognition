@@ -195,7 +195,7 @@ class Transpose:
             	dt[data.columns[i*d+d]]=data[data.columns[i*d+1:i*d+(d+1)]].sum(1)
                 
 
-            dt.to_csv(os.path.join(output_path,'downsample_'+ doc))
+            dt.to_csv(os.path.join(output_path,'downsampled_'+ doc))
                     
 
 Transpose.get_data_frames('/home/minbaev/Downloads/SC/')
