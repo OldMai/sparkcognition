@@ -169,9 +169,9 @@ class Transpose:
 
                         # transform the matrix to the format we want
                         # weekday<5 represent weekdays
-                        dt=df[df['weekday']<5].pivot(index='Date', columns='Time', values='Value') 
+                        dt=df[df['weekday']<5].pivot(index='Date', columns='Time', values='Value').fillna(0)
                         #weekday>4 represents weekends
-                        dtw=df[df['weekday']>4].pivot(index='Date', columns='Time', values='Value') 
+                        dtw=df[df['weekday']>4].pivot(index='Date', columns='Time', values='Value').fillna(0)
                         
                         dt.to_csv(os.path.join(output_path,'tranpose_' + doc))
                         
