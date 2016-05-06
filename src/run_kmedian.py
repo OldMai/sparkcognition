@@ -4,19 +4,29 @@ import numpy as np
 from kmedian import kmedian
 import os 
 import sys
+import datetime as dt
+
 
 # get the training data matrix for a certain (appliance, date)
-# from all homes 
-def get_train_dataframe(files, curr_date):
+# from all homes
+def get_train_dataframe(files, curr_date, week=False):
+    if not week:
+        drange = [curr_date]
+    elif curr_date.weekday()<5: # weekday
+        drange = [curr_date + dt.timedelta(days=delta) for delta in range(-curr_date.weekday(), 5-curr_date.weekday())]
+    else:
+        drange = [curr_date + dt.timedelta(days=delta) for delta in range(5-curr_date.weekday(), 7-curr_date.weekday())]
+
     train_df = pd.DataFrame()
     for f in files:
         df1 = pd.read_csv(f, index_col='Date')
-        try:
-            new_row = df1.loc[curr_date.isoformat()]
-            # print 'new_row', new_row
-            train_df = train_df.append(new_row, ignore_index=True)
-        except KeyError:
-            print 'no date', curr_date, 'in file', f
+        for d in drange:
+            try:
+                new_row = df1.loc[d.isoformat()]
+                # print 'new_row', new_row
+                train_df = train_df.append(new_row, ignore_index=True)
+            except KeyError:
+                print 'no date', curr_date, 'in file', f
     return train_df
 
 
@@ -26,7 +36,7 @@ def select_pattern(patterns, usage, delta):
     usage_m = np.tile(usage, (nrow, 1))
     dist_m = np.zeros(shape=(nrow, ncol/delta))
     for i in range(dist_m.shape[1]):
-          np.fabs(np.roll(patterns, i*delta, axis=1) - usage_m).sum(axis=1, out=dist_m[:,i])
+        np.fabs(np.roll(patterns, i*delta, axis=1) - usage_m).sum(axis=1, out=dist_m[:,i])
     # print "distance matrix", dist_m
     row, col = np.unravel_index(dist_m.argmin(), dist_m.shape)
     return np.roll(patterns[row], col*delta)
@@ -80,7 +90,9 @@ def run_kmedian(testdir, traindir, soldir, k_clusters):
                     # prepare training data matrix for current date
                     glob_path = os.path.join(traindir, '*_' + app + '_' + day_of_week + '_out.csv')
                     train_all_files = glob.glob(glob_path)
-                    train = get_train_dataframe(train_all_files, curr_date)
+
+                    train = get_train_dataframe(train_all_files, curr_date, week=True)
+                    print len(train)
 
                     # train:
                     # kmedian uses numpy.array
