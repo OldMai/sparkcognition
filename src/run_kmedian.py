@@ -96,7 +96,7 @@ def run_kmedian(testdir, traindir, soldir, k_clusters):
 
                     # train:
                     # kmedian uses numpy.array
-                    kpatterns = kmedian(np.array(train), k=k_clusters, steps=10)
+                    kpatterns = kmedian(np.array(train), k=k_clusters, steps=20)
                     # print "k patterns", kpatterns
 
                     # add one more zero pattern

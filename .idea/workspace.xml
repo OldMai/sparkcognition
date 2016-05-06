@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9081856d-65fc-44cb-a2e9-71fc245157c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/zhaoxinyu.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/zhaoxinyu.xml" />
+    <list default="true" id="9081856d-65fc-44cb-a2e9-71fc245157c9" name="Default" comment="Merge branch 'master' of github.com:OldMai/sparkcognition&#10;&#10;# Conflicts:&#10;#&#9;src/convert_ps.py&#10;#&#9;src/kmedian.py&#10;&#10;added weekly grouping, extract the whole week data for training.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/run_kmedian.py" afterPath="$PROJECT_DIR$/src/run_kmedian.py" />
     </list>
@@ -33,8 +32,8 @@
       <file leaf-file-name="run_kmedian.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/run_kmedian.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+            <state relative-caret-position="379">
+              <caret line="98" column="79" selection-start-line="98" selection-start-column="79" selection-end-line="98" selection-end-column="79" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -450,19 +449,26 @@
       <option name="project" value="LOCAL" />
       <updated>1462497730929</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Merge branch 'master' of github.com:OldMai/sparkcognition&#10;&#10;# Conflicts:&#10;#&#9;src/convert_ps.py&#10;#&#9;src/kmedian.py&#10;&#10;added weekly grouping, extract the whole week data for training.">
+      <created>1462502393227</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1462502393227</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1695279" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5071531" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4320458" sideWeight="0.49713877" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4320458" sideWeight="0.49713877" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.49284694" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -495,7 +501,8 @@
     <MESSAGE value="to sync with remote, upload pycharm config files." />
     <MESSAGE value="to sync with remote, upload pycharm config files. second" />
     <MESSAGE value="Merge branch 'master' of github.com:OldMai/sparkcognition&#10;&#10;# Conflicts:&#10;#&#9;src/convert_ps.py&#10;#&#9;src/kmedian.py&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:OldMai/sparkcognition&#10;&#10;# Conflicts:&#10;#&#9;src/convert_ps.py&#10;#&#9;src/kmedian.py&#10;" />
+    <MESSAGE value="Merge branch 'master' of github.com:OldMai/sparkcognition&#10;&#10;# Conflicts:&#10;#&#9;src/convert_ps.py&#10;#&#9;src/kmedian.py&#10;&#10;added weekly grouping, extract the whole week data for training." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:OldMai/sparkcognition&#10;&#10;# Conflicts:&#10;#&#9;src/convert_ps.py&#10;#&#9;src/kmedian.py&#10;&#10;added weekly grouping, extract the whole week data for training." />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
@@ -753,8 +760,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/run_kmedian.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+        <state relative-caret-position="379">
+          <caret line="98" column="79" selection-start-line="98" selection-start-column="79" selection-end-line="98" selection-end-column="79" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
