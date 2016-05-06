@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9081856d-65fc-44cb-a2e9-71fc245157c9" name="Default" comment="" />
-    <list id="38f326c4-19b6-45b5-be61-cfc285644ac2" name="pycharm config" comment="don not commit pycharm system config files (anything under .idea)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/zhaoxinyu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sparkcognition.iml" afterPath="$PROJECT_DIR$/.idea/sparkcognition.iml" />
+    <list default="true" id="9081856d-65fc-44cb-a2e9-71fc245157c9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sparkcognition.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -473,7 +468,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9081856d-65fc-44cb-a2e9-71fc245157c9" name="Default" comment="" />
-      <changelist id="38f326c4-19b6-45b5-be61-cfc285644ac2" name="pycharm config" comment="don not commit pycharm system config files (anything under .idea)" />
+      <changelist id="" name="pycharm config" comment="don not commit pycharm system config files (anything under .idea)" />
       <created>1457198289778</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -493,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1462497537591</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="to sync with remote, upload pycharm config files.">
+      <created>1462497625126</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1462497625126</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -535,7 +537,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add zero patterns." />
     <MESSAGE value="add zero patterns. second try." />
-    <option name="LAST_COMMIT_MESSAGE" value="add zero patterns. second try." />
+    <MESSAGE value="to sync with remote, upload pycharm config files." />
+    <option name="LAST_COMMIT_MESSAGE" value="to sync with remote, upload pycharm config files." />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
