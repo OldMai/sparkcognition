@@ -8,7 +8,6 @@ from nilmtk.datastore import Key
 from nilmtk.measurement import LEVEL_NAMES
 from nilm_metadata import convert_yaml_to_hdf5, save_yaml_to_datastore
 
-from sys import stdout
 from os.path import join, isdir, isfile
 from os import listdir
 import re
@@ -43,6 +42,7 @@ def _convert_to_datastore(input_path, store, tz):
         dtype_dict = {m: np.float32 for m in MAJOR_LOAD}
         dtype_dict[TIME_INDEX] = pd.datetime
         whole_df = pd.read_csv(csv_filename, index_col=TIME_INDEX, dtype=dtype_dict)
+        del whole_df.index.name
         print ("processing ", home_id, end="... ")
         for meter in MAJOR_LOAD:
             meter_id = int(MAJOR_LOAD.index(meter))+1
@@ -70,7 +70,7 @@ def _get_all_homes(input_path):
 
 def _load_csv(whole_df, meter, tz):
     df = whole_df[[meter]]
-    # del df.index.name
+    # print ("index name here:", df.index.name)
     two_level_index = pd.MultiIndex.from_tuples([('power','active')])
     df.columns = two_level_index
     df.columns.set_names(LEVEL_NAMES, inplace=True)
